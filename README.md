@@ -9,6 +9,15 @@ This project runs entirely on Python3
 pip install -r requirements.txt
 ```
 
+## Setting up Environment Variables
+Create a `.env` file for envirionment variables
+
+```
+cd youtube-etl
+touch .env
+
+```
+
 # Usage
 ## Extracting Data
 Change directory to the root directory and run `main.py`
