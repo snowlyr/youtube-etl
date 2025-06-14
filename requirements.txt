@@ -16,6 +16,7 @@ apache-airflow>=2.5.0
 # Analysis
 matplotlib>=3.5.1
 seaborn>=0.13.2
+statsmodels>=0.14.4
 
 # Testing
 # pytest>=7.0.0

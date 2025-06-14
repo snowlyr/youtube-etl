@@ -3,8 +3,12 @@ import seaborn as sns
 import pandas as pd
 import sqlite3
 
+# Declare FilePaths
+DATA_FILE_PATH = "../data/youtube.db"
+IMAGE_FILE_PATH = "./visualisation/category_trends.png"
+
 # Connect to database
-conn = sqlite3.connect('../../data/youtube.db')
+conn = sqlite3.connect(DATA_FILE_PATH)
 
 # Top 10 videos by engagement
 print("=============== Top 10 By Engagement ===============")
@@ -43,4 +47,5 @@ sns.barplot(data=category_trends, x='category_id', y='video_count', hue='region'
 plt.title('Trending Video Categories by Region')
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.savefig('graphs/category_trends.png')
+plt.savefig(IMAGE_FILE_PATH)
+print(f"[INFO] Plot created at {IMAGE_FILE_PATH}")
